@@ -1,157 +1,471 @@
 /*style for the nexus hub world / hub island*/
 
-/*at the lowest level of the document*/
 :root {
-  /* variables: */
-  --pillar-height: 400px;
+	/* variables: */
 
-  /* colors */
-  --color_text: #aa00ff;
-  --color_borders: #00ffbf;
+	/* colors */
+	--color_cyan: #00ffbf;
+	--color_purple: #aa00ff;
+	--color_darkpurple: #420063;
+	--color_menu_bg: rgba(28, 141, 169, 0.539);
+
 }
-
-/*selects all elements*/
-* {
-  box-sizing: border-box;
-}
-
-/*Custom Font*/
-
-/*optional, not yet implemented i guess. For how to implement, google (using duckduckgo), or see style_example.css */
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*put custom Font in there i guess. (but with quotes ' ' ) */
-
-  margin: 0;
-  min-height: 100%;
-
-  text-align: center;
-
-  color: var(--color_text);
-
-  background: radial-gradient(ellipse at top left, rgb(217, 241, 255), rgb(69, 184, 255) 100%); /*sick ass background gradient */
-  overflow-x: hidden;
+	margin: 0;
 }
 
-/*not the element <menu> but the element with id="menu" */
-/*wrapper for the videogame style menu framed by pillars*/
-#menu {
-  display: flex;
-  right: 50%;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-
-
-  /*temp border for testing*/
-  /*border: 2px solid black;*/
-
-  justify-content: space-evenly;
-
-}
-
-#main-menu {
-  background-color: rgba(28, 141, 169, 0.539);
-  border:5px outset #00ffbf;
-  border-radius: 20px;
-  min-width: 80%;
-  height: fit-content;
-  max-height: var(--pillar-height);
-  overflow-y: auto;
-  z-index: 10;
-}
-/*gonna use display: grid here*/
-
-
-#main-menu button {
-  background-color: rgb(132, 132, 132);
-}
-
-.pillar {
-  width: 75px;
-  height: 400px;
-  z-index: 9;
-}
-/*
-.pillar:nth-of-type(1) {
-  transform: translateX(+50%);
-}
-.pillar:nth-of-type(2) {
-  transform: translateX(-50%);
-}
-*/
-
-
-
-
-/* sets properties of elements with !CLASS! flex*/
-.flex {
-  display: flex;
-}
-@media only screen and (max-width: 800px) {
-  .flex {
-    flex-wrap: wrap;
-  }
-  aside {
-    width: 100%;
-  }
-
-  .pillar {
-    transform: translateX();
-  }
-
-}
-
-/*used to set the properties of div with id=container */
-.container {
-  /*center div*/
-  margin: 0 auto;
-}
-
-/*for all links in container: */
-.container a {
-  color: aqua;
-  font-weight: bold;
-  /* if you want to remove the underline
-  you can add a line below here that says:
-  text-decoration:none; */
-}
-
-/*no header and navbar in here?*/
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.wip {
+	border-color: #8c8c8c;
+	border-width: -2px;
+	border-style: dotted;
 }
 
 .pixelart {
-  image-rendering: pixelated;
+	image-rendering: pixelated;
 }
 
 #bg-container {
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(ellipse at top left, rgb(246, 255, 217), rgb(69, 184, 255) 100%);
+	/* background: linear-gradient(rgb(84, 143, 162), rgb(255, 255, 255)) */
 }
+
 #bg-container li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1024px;
-  animation: bg_scroll 10s linear infinite;
-  background-color: rgb(242, 250, 255);
+	/*sick ass background gradient */
+	overflow-x: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1024px;
+	animation: bg_scroll 10s linear infinite;
+	background-color: rgb(242, 250, 255);
 }
 
 @keyframes bg_scroll {
-  to {
-    background-position: -1024px 0;
-  }
+	to {
+		background-position: -1024px 0;
+	}
+}
+
+/* starting with the button carousel */
+.web_buttons {
+	margin: 0 auto;
+	margin-bottom: 50px;
+	padding: 0 0;
+	/* width: 100%; */
+	overflow: hidden;
+	display: flex;
+
+	/* >* {
+		flex: 0 0 100%;
+	} */
+	image-rendering: pixelated;
+
+	&:hover ul {
+		animation-play-state: paused;
+	}
+}
+
+.web_buttons ul {
+	display: flex;
+	gap: 50px;
+	/* Add padding to the right to create a gap between the last and first card. */
+	padding-left: 50px;
+
+	list-style-type: none;
+	will-change: transform;
+	/* We should be nice to the browser - let it know what we're going to animate. */
+	animation: websites_scroll 30s linear infinite;
+}
+
+.web_buttons li {
+	width: 200px;
+	height: 100px;
+	color: white;
+
+	/* the flyer */
+	& img {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	/* the banner/button */
+	& a {
+		height: 31px;
+		width: 88px;
+		z-index: 10;
+		position: absolute;
+		top: 50px;
+	}
+}
+
+.web_button {
+	image-rendering: pixelated;
+	transition: transform .2s;
+
+	/* Animation */
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+@keyframes websites_scroll {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.hover-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.web_button:hover .hover-text {
+	opacity: 1;
+}
+
+/* .center {
+	flex: auto;
+	align-self: center;
+	margin: auto;
+} */
+
+.middle {
+	display: flex;
+
+	& * {
+		z-index: 1;
+	}
+
+	& .left,
+	.right {
+		margin: 1%;
+	}
+
+	& .left {
+		flex: 1 1 auto;
+	}
+
+	& .menu_container {
+		flex: 1 1 auto;
+	}
+
+	& .right {
+		flex: 1 1 auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.middle .left {
+		display: none
+	}
+
+	.middle .right {
+		display: none
+	}
+}
+
+.menu_container {
+	display: flex;
+	min-width: 200px;
+	width: 60%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	text-align: center;
+
+	>* {
+		position: relative;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.menu_container {
+		max-width: 500px;
+	}
+}
+
+.pillar {
+	transform: scaleY(1.2);
+
+	& img {
+		width: 100px;
+		;
+	}
+}
+
+.pillar .left {
+	offset: -100px;
+}
+
+.pillar .right {
+	offset: +100px;
+}
+
+.menu {
+	align-self: center;
+	--btn-size: 30pt;
+	display: grid;
+	max-width: 500px;
+	grid-template-columns: minmax(200px, 700px);
+	/* grid-template-rows: repeat(3, var(--btn-size)) 16px var(--btn-size); */
+	grid-template-areas:
+		"first"
+		"second"
+		"third"
+		"fourth"
+		"fifth";
+	grid-gap: 8px;
+	position: relative;
+	padding: 5px;
+	background-color: var(--color_menu_bg);
+
+	/* & button:nth-child(1) {
+		grid-area: first;
+	} */
+
+	& a {
+		height: var(--btn-size);
+
+		cursor: pointer;
+		overflow: hidden;
+		white-space: nowrap;
+		user-select: none;
+		background: var(--color_cyan);
+		color: var(--color_darkpurple);
+		border: 2px solid var(--color_darkpurple);
+		align-content: center;
+		text-decoration: none;
+
+		&:hover {
+			background-color: var(--color_cyan);
+			font-weight: bold;
+			/* color: var(--color_cyan); */
+			/* text-shadow: 2px 2px #ffffffcc; */
+			/* color: #85ffeb; */
+			box-shadow: rgba(240, 46, 170, 0.4) 1px 1px, rgba(240, 46, 170, 0.4) 1px 1px inset,
+				rgba(240, 46, 170, 0.3) 3px 3px, rgba(240, 46, 170, 0.3) 3px 3px inset,
+				rgba(240, 46, 170, 0.2) 5px 5px,
+				rgba(240, 46, 170, 0.1) 8px 8px,
+				rgba(240, 46, 170, 0.05) 10px 10px;
+		}
+
+		&:active {
+			color: var(--color_purple);
+			/* box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5; */
+		}
+	}
+
+
+
+	& .double {
+
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: "left right";
+		grid-gap: 8px;
+
+		& :nth-child(1) {
+			grid-area: left;
+		}
+
+		& :nth-child(2) {
+			grid-area: right;
+		}
+	}
+
+
+}
+
+.island {
+	width: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	/* margin-top: 20px; */
+	z-index: 0;
+	position: relative;
+	top: -100px;
+	padding-top: 100px;
+	min-height: 300px;
+	display: flex;
+	/* flex-direction: row; */
+	/* justify-content: space-evenly; */
+	/* align-items: center; */
+	/* background-image:
+		url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ l\ 1.png),
+		url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ 1.png),
+		url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ r\ 1.png); */
+	/* background-position: 2px; */
+	/* background-size: 50%; */
+	/* background-size: cover;
+	background-position-x: center; */
+
+	>.ground {
+		display: flex;
+
+		z-index: 5;
+		position: absolute;
+		height: 1024px;
+		width: 100%;
+		top: -256px;
+
+		>* {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			flex: auto auto 1;
+			width: 100%;
+			height: 100%;
+		}
+
+
+		& .left {
+			background-image: url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ l\ 1.png);
+		}
+
+		& .middle {
+			background-image: url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ 1.png);
+		}
+
+		& .right {
+			background-image: url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ r\ 1.png);
+		}
+
+
+	}
+}
+
+@media (max-width: 1792px) {
+	.island .ground .middle:nth-of-type(2) {
+		display: none;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.island .ground .left,
+	.island .ground .right {
+		display: none;
+	}
+}
+
+.dragonsden {
+	background-image: url(/assets/backgrounds/ground/2026-01-07\ sleep-ground.png);
+	z-index: 10;
+	background-repeat: no-repeat;
+	margin-left: 10%;
+	width: 512px;
+	height: 512px;
+}
+
+#dragon_sleep {
+	z-index: 11;
+	position: relative;
+	background-repeat: no-repeat;
+	background-image: url(/assets/hub/dragonpet/fantasydragon-sleeping.gif);
+	background-size: 100%;
+	width: 512px;
+	height: 512px;
+
+	&:hover {
+		background-image: url(/assets/hub/dragonpet/fantasydragon-attention.gif);
+	}
+
+	&:active {
+		background-image: url(/assets/hub/dragonpet/fantasydragon-petted.gif );
+	}
+}
+
+/* @media (pointer:coarse) {
+	#dragon_sleep:hover {
+		background-image: url(/assets/hub/dragonpet/fantasydragon-petted.gif );
+	}
+} */
+
+#follow_mouse {
+	z-index: 10;
+	flex: 1;
+	margin-right: 10%;
+	margin-top: 50px;
+	height: 512px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	#follow_mouse {
+		display: none
+	}
+}
+
+
+footer {
+	border-top: 2px solid #085052;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 5px;
+	background: url(/assets/backgrounds/stonewall.png), #e1e4bca2;
+	background-size: auto 100%;
+
+	>* {
+		/* margin-right: 20px; */
+		/* margin-left: 20px; */
+		padding-right: 10px;
+		padding-left: 10px;
+		background: #e9e1d9c6;
+	}
+
+	& .copyright {
+		justify-content: flex-start;
+		text-align: left;
+		/* padding-bottom: 0px;
+		padding-right: 10%; */
+	}
+
+	& .source {
+		justify-content: flex-start;
+		justify-items: right;
+		/* padding-right: 10%; */
+
+		/* position: absolute;
+		left: 50%;
+		transform: translateX(-50%); */
+
+		& p {
+			margin-bottom: 0px;
+		}
+
+		& embed {
+			justify-items: right;
+		}
+	}
+
+	& .visitor_counter {
+		margin-right: 20px;
+		width: 100px;
+		/* margin-left: auto; */
+	}
+
+	& .construction {
+		background: #ffffff00;
+	}
 }

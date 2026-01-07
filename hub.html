@@ -1,153 +1,268 @@
 <!DOCTYPE html>
 
 <html>
+	<head>
+		<meta charset="UTF-8" />
 
-  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
+		<title>Main hub FantasyDragons website</title>
 
-    <!--
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    uncomment if mobile-ready
-    -->
+		<link href="hub.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/assets/favicons/favicon-den.png" rel="icon" type="image/png" />
 
-    <title>Main hub FantasyDragons website</title>
+		<link href="https://fantasydragon.xyz/blog/rss..xml" rel="alternate" type="application/rss+xml" title="The Dragons Blog" />
+	</head>
 
-    <!-- The style.css file allows you to change the look of your web pages.
-
-         If you include the next line in all your web pages, they will all share the same look.
-
-         This makes it easier to make new pages for your site. -->
-
-    <link href="hub.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/favicons/favicon-den.png" rel="icon" type="image/png">
-
-    <link href="https://fantasydragon.xyz/blog/rss..xml"
-      rel="alternate" type="application/rss+xml" title="The Dragons Blog" />.
-
-  </head>
-
-  <body>
-    <div id="bg-container">
-      <ul>
-        <li style="height: 100%; margin-top: 300px;"></li>
-        <!-- removes the damn gap/repeat at the bottom of the page by filling it with white -->
-        <li
-          style="background: url(/assets/backgrounds/clouds/1.png); animation-duration: 60s;"></li>
-        <li
-          style="background: url(/assets/backgrounds/clouds/2.png); animation-duration: 40s;"></li>
-        <li
-          style="background: url(/assets/backgrounds/clouds/3.png); animation-duration: 20s;"></li>
-        <li
-          style="background: url(/assets/backgrounds/clouds/4.png); animation-duration: 10s;"></li>
-      </ul>
-    </div>
-
-    <script>NekoType="mermaid"</script>
-
-    <h1 id="nl"><script src="https://webneko.net/n20171213.js"></script><a
-        href="https://webneko.net">Neko</a></h1>
-
-    <h1>My Website!</h1>
-
-    <h2>the website specifically made by me</h2>
-
-    <h3>Fantasydragon14's website</h3>
-
-    <p>
-
-      <bar>
-
-        <a href="/">______Welcome!______</a>
-
-      </bar>
-
-    </p>
-
-    <aside class="left">
-      ...
-    </aside>
-    <div id="menu">
-      <img src="/assets/backgrounds/pillar-stone.png" alt="a stone pillar"
-        class="pillar left">
-
-      <nav id="main-menu" style="z-index: 10;">
-        <ul>
-
-          <li>
-
-            <a href="https://fantasydragon.xyz/links">How you can contact me</a>
-
-          </li>
-          <li>
-            <a href="blog/001_blog_introduction.html">an attempt at my own blog </a> <br>
-            i kinda gave up after a few posts, and there's no infrastructure yet
-          </li>
-          <li>
-
-            <a href="blog/002_reading.html">See some reading reccommendations</a>
-
-          </li>
-          <li>
-            <a href="/dragons-den/playground/index.html">Fun code i've found elsewhere</a>  that helps me understand html, css & javascript
-          </li>
-          <li>
-            <a href="dragons-den/question.html">questionaire for visitors</a>
-          </li>
-
-        </ul>
-      </nav>
-      <img src="/assets/backgrounds/pillar-stone.png" alt="a stone pillar"
-        class="pillar">
-    </div>
-
-    <p>
-      <a href="https://github.com/users/FantasyDragon14/projects/2">
-        <img src="/assets/under_construction.gif"
-          alt="an under construction banner">
-      </a>
-      <br><embed src="https://img.shields.io/github/last-commit/FantasyDragon14/dragons_den-webpage?style=for-the-badge&label=last%20change&labelColor=%23aa00ff&link=https%3A%2F%2Fgithub.com%2FFantasyDragon14%2Fdragons_den-webpage
-" type=""><br>
-      This site is still in <strong>development</strong> and will
-      <em>change</em> over time ^w^ <br>
-
-        visit Roadmap:
-       <br>
-      <a href="https://github.com/FantasyDragon14/dragons_den-webpage">See the
-        code (github)</a>
-
-    </p>
-
-    <br>
-
-    cool buttons and sites:
-    <div id="buttons">
-      <style>
-        #buttons {
-          margin-top: 20px;
-          flex-wrap: wrap;
-        }
-      </style>
-
-      <a href="https://tilde-os.neocities.org/">
-        <img src="https://tilde-os.neocities.org/tilde_os_button.gif"
-          alt="a website-button with C:/~" title="tilde-os"></a>
-
-      <a href="https://vertpush.neocities.org/">
-        <img
-          style="width: 88px; height: 31px;"
-          src="https://vertpush.neocities.org/buttons/vertpushbutton.gif"
-          alt="vertpush website button" title="vertpush">
-      </a>
-
-    </div>
-    <br>
-    <iml>
-      <br><br>
-
-      visitor count (allegedly): <script type="text/javascript"
-        src="//counter.websiteout.com/js/2/0/0/1"></script>
-
-    </iml>
-  </body>
+	<body>
+		<!-- <header></header> -->
+		<!-- button carousel -->
+		<div class="top">
+			<div class="web_buttons">
+				<!-- Just collapse this ul -->
+				<ul>
+					<li>
+						<div class="web_button">
+							<a href="https://vertpush.neocities.org/" target="_blank" rel="noopener" title="Holy shit this site is so cool">
+								<img style="width: 88px; height: 31px" src="https://vertpush.neocities.org/buttons/vertpushbutton.gif" alt="vertpush website button" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://tilde-os.neocities.org/" target="_blank" rel="noopener" title="Great Dragon Friend"> <img src="https://tilde-os.neocities.org/tilde_os_button.gif" alt="a website-button with C:/~" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="#" title="Why are you pulling a cloud">
+								<img style="width: 88px; height: 31px" src="/assets/backgrounds/clouds/cloud1.png" alt="a cloud" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://neververy4.com" target="_blank" rel="noopener" title="Cool Dragon (check out his forum)">
+								<img style="width: 88px; height: 31px" src="/assets/other_buttons/neververy4.com.png" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://www.savethedragons.xyz" target="_blank" rel="noopener" title="Save the Dragons Campaign"> <img src="/assets/other_buttons/savethedragons.xyz.gif" width="88" height="31" alt="Save the Dragons Campaign" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://ytd.wtf" target="_blank" rel="noopener" title="Cool Dragon Friend (with a cool name)"> <img src="https://ytd.wtf/yurithedragon_88x31.gif" style="image-rendering: pixelated" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://azteria.neocities.org" target="_blank" rel="noopener" title="Friend Azteria"> <img src="https://azteria.neocities.org/88x31.gif" style="image-rendering: pixelated" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_cyber.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_den.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_vaporwave.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://icosahedr.online/" target="_blank" rel="noopener" title="Puppydog friend :3">
+								<img style="width: 88px; height: 31px" src="https://misc.icosahedr.online/trinket/sapbutton.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="#" title="Why are you pulling a cloud">
+								<img style="width: 88px; height: 31px" src="/assets/backgrounds/clouds/cloud2.png" alt="a cloud" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+				</ul>
+				<!-- instad edit this one, then replace the top ul & remove the `aria-hidden` to unhide one set of buttons from screen readers. -->
+				<ul aria-hidden>
+					<li>
+						<div class="web_button">
+							<a href="https://vertpush.neocities.org/" target="_blank" rel="noopener" title="Holy shit this site is so cool">
+								<img style="width: 88px; height: 31px" src="https://vertpush.neocities.org/buttons/vertpushbutton.gif" alt="vertpush website button" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://tilde-os.neocities.org/" target="_blank" rel="noopener" title="Great Dragon Friend"> <img src="https://tilde-os.neocities.org/tilde_os_button.gif" alt="a website-button with C:/~" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="#" title="Why are you pulling a cloud">
+								<img style="width: 88px; height: 31px" src="/assets/backgrounds/clouds/cloud1.png" alt="a cloud" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://neververy4.com" target="_blank" rel="noopener" title="Cool Dragon (check out his forum)">
+								<img style="width: 88px; height: 31px" src="/assets/other_buttons/neververy4.com.png" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://www.savethedragons.xyz" target="_blank" rel="noopener" title="Save the Dragons Campaign"> <img src="/assets/other_buttons/savethedragons.xyz.gif" width="88" height="31" alt="Save the Dragons Campaign" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://ytd.wtf" target="_blank" rel="noopener" title="Cool Dragon Friend (with a cool name)"> <img src="https://ytd.wtf/yurithedragon_88x31.gif" style="image-rendering: pixelated" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://azteria.neocities.org" target="_blank" rel="noopener" title="Friend Azteria"> <img src="https://azteria.neocities.org/88x31.gif" style="image-rendering: pixelated" /></a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_cyber.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_den.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://fantasydragon.xyz" target="_blank" rel="noopener" title="You're on that site already :3">
+								<img style="width: 88px; height: 31px" src="https://fantasydragon.xyz/buttons/fantasydragon14-button_vaporwave.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="https://icosahedr.online/" target="_blank" rel="noopener" title="Puppydog friend :3">
+								<img style="width: 88px; height: 31px" src="https://misc.icosahedr.online/trinket/sapbutton.gif" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="web_button">
+							<a href="#" title="Why are you pulling a cloud">
+								<img style="width: 88px; height: 31px" src="/assets/backgrounds/clouds/cloud2.png" alt="a cloud" />
+							</a>
+							<img src="/assets/web_button-flyers/test_web_button_flyer.png" alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- middle menu and [tbd] -->
+		<div class="middle">
+			<div class="left">.</div>
+			<div class="menu_container">
+				<div class="pillar"><img src="/assets/backgrounds/pillar-stone.png" alt="a stone pillar" /></div>
+				<nav class="menu">
+					<a href="/about/me.html">About<br />me</a>
+					<a href="/about/this-site.html">About<br />this site</a>
+					<a href="/links.html">Links</a>
+					<a href="https://test.fantasydragon.xyz">My <s>playground</s><br />Testing site</a>
+					<div class="double">
+						<a href="#">nothin</a>
+						<a href="#">here yet</a>
+					</div>
+				</nav>
+				<div class="pillar"><img src="/assets/backgrounds/pillar-stone.png" alt="a stone pillar" /></div>
+			</div>
+			<div class="right">.</div>
+		</div>
+		<!-- pettable dragon and (probably some follow mouse character thingy?) -->
+		<div class="island">
+			<div class="ground">
+				<div class="left"></div>
+				<div class="middle"></div>
+				<div class="middle"></div>
+				<div class="right"></div>
+			</div>
+			<div class="dragonsden">
+				<div id="dragon_sleep"></div>
+			</div>
+			<div id="follow_mouse" class="wip">(put little mouse-following character here)</div>
+		</div>
+		<footer>
+			<p class="copyright" id="copyright">©2020 - 2026 FantasyDragon14</p>
+			<a class="construction" style="margin-top: 20px" href="https://github.com/users/FantasyDragon14/projects/2">
+				<img src="/assets/under_construction.gif" alt="an under construction banner" />
+			</a>
+			<div class="source">
+				<p>Source to this page on Github:</p>
+				<embed
+					src="https://img.shields.io/github/last-commit/FantasyDragon14/dragons_den-webpage?style=for-the-badge&label=last%20change&labelColor=%23aa00ff&link=https%3A%2F%2Fgithub.com%2FFantasyDragon14%2Fdragons_den-webpage
+"
+					type=""
+				/>
+			</div>
+			<div class="visitor_counter">
+				visitor count <sup>(allegedly)</sup>
+				<script type="text/javascript" src="https://counter.websiteout.com/js/22/0/150/1"></script>
+			</div>
+		</footer>
+		<!-- background -->
+		<div id="bg-container">
+			<ul>
+				<li style="height: 100%; margin-top: 300px"></li>
+				<!-- removes the damn gap/repeat at the bottom of the page by filling it with white -->
+				<li style="background: url(/assets/backgrounds/clouds/1.png); animation-duration: 60s"></li>
+				<li style="background: url(/assets/backgrounds/clouds/2.png); animation-duration: 40s"></li>
+				<li style="background: url(/assets/backgrounds/clouds/3.png); animation-duration: 20s"></li>
+				<li style="background: url(/assets/backgrounds/clouds/4.png); animation-duration: 10s"></li>
+			</ul>
+		</div>
+	</body>
 </html>
