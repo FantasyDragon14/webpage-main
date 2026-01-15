@@ -1,6 +1,8 @@
+@import url(colors.css);
+
 body {
 	background-color: rgb(11, 0, 20);
-	color: aquamarine;
+	color: var(--color_cyan);
 	font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
 	align-items: center;
 }
@@ -140,7 +142,7 @@ a {
 	display: block;
 	margin: 10px;
 	text-decoration: none;
-	color: aquamarine;
+	color: var(--color_cyan);
 }
 
 a:hover {
@@ -153,7 +155,27 @@ a:active {
 }
 
 a:visited {
-	color: rgb(166, 0, 255);
+	color: var(--color_purple);
+}
+
+.collapsible label::before {
+	/* the little arrow in the front */
+	content: ' ';
+	display: inline-block;
+
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid currentColor;
+
+	vertical-align: middle;
+	margin-right: .7rem;
+	transform: translateY(-2px);
+
+	transition: transform .2s ease-out;
+}
+
+.collapsible>input[type="checkbox"]:checked+* label::before {
+	transform: rotate(90deg) translateX(-3px);
 }
 
 /*for functionality*/
@@ -166,12 +188,14 @@ a:visited {
 	overflow-y: hidden;
 	height: 0;
 	transition: height 1s ease;
+	border-left: 2px solid var(--color_cyan);
 }
 
 .collapsible>input[type="checkbox"]:checked~.content {
 	height: auto;
 	overflow: visible;
 }
+
 
 .collapsible label {
 	display: block;

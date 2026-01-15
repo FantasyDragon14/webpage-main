@@ -1,4 +1,14 @@
 @media (width: 250px) and (height: 250px) {
+	:root {
+		/* variables: */
+
+		/* colors */
+		--color_cyan: #00ffbf;
+		--color_purple: #aa00ff;
+		--color_darkpurple: #420063;
+		--color_menu_bg: rgba(28, 141, 169, 0.539);
+
+	}
 
 	html,
 	body,
@@ -67,5 +77,81 @@
 	.plant {
 		width: 250px;
 		height: 250px;
+		background: radial-gradient(ellipse at top left, rgb(246, 255, 217), rgb(69, 184, 255) 100%);
+
+		>.ground {
+			background-image: url(/assets/backgrounds/ground/2026-01-07\ Island-Floor\ 1.png);
+			background-size: 100%;
+			background-position: 100px;
+
+			>.dragonsden {
+				background-image: url(/assets/backgrounds/ground/2026-01-07\ sleep-ground.png);
+				background-size: 100%;
+				z-index: 10;
+				background-repeat: no-repeat;
+				width: 250px;
+				height: 250px;
+
+				>#dragon_sleep {
+					z-index: 11;
+					background-repeat: no-repeat;
+					background-image: url(/assets/hub/dragonpet/fantasydragon-sleeping.gif);
+					background-size: 100%;
+					width: 250px;
+					height: 250px;
+
+					&:hover {
+						cursor: grab;
+						background-image: url(/assets/hub/dragonpet/fantasydragon-attention.gif);
+					}
+
+					&:active {
+						cursor: grabbing;
+						background-image: url(/assets/hub/dragonpet/fantasydragon-petted.gif );
+					}
+
+				}
+
+				& a {
+
+					position: absolute;
+					padding: 5px;
+					bottom: 10px;
+					right: 10px;
+					text-align: right;
+
+
+					cursor: pointer;
+					overflow: hidden;
+					white-space: nowrap;
+					user-select: none;
+					background: var(--color_cyan);
+					color: var(--color_darkpurple);
+					border: 2px solid var(--color_darkpurple);
+					align-content: center;
+					text-decoration: none;
+
+					&:hover {
+						background-color: var(--color_cyan);
+						font-weight: bold;
+						/* color: var(--color_cyan); */
+						/* text-shadow: 2px 2px #ffffffcc; */
+						/* color: #85ffeb; */
+						box-shadow: rgba(240, 46, 170, 0.4) 1px 1px, rgba(240, 46, 170, 0.4) 1px 1px inset,
+							rgba(240, 46, 170, 0.3) 3px 3px, rgba(240, 46, 170, 0.3) 3px 3px inset,
+							rgba(240, 46, 170, 0.2) 5px 5px,
+							rgba(240, 46, 170, 0.1) 8px 8px,
+							rgba(240, 46, 170, 0.05) 10px 10px;
+					}
+
+					&:active {
+						color: var(--color_purple);
+						/* box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5; */
+					}
+				}
+			}
+		}
+
+
 	}
 }
