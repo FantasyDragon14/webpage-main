@@ -1,18 +1,15 @@
 /*style for the nexus hub world / hub island*/
 
-:root {
-	/* variables: */
+@import url(colors.css);
 
-	/* colors */
-	--color_cyan: #00ffbf;
-	--color_purple: #aa00ff;
-	--color_darkpurple: #420063;
-	--color_menu_bg: rgba(28, 141, 169, 0.539);
-
+@font-face {
+	font-family: minecraft_seven_v2;
+	src: url(/assets/fonts/Minecraft-Seven_v2.ttf);
 }
 
 body {
 	margin: 0;
+	font-family: minecraft_seven_v2;
 }
 
 .wip {
@@ -56,9 +53,8 @@ body {
 
 /* starting with the button carousel */
 .web_buttons {
-	margin: 0 auto;
-	margin-bottom: 50px;
-	padding: 0 0;
+	margin: 0px auto 50px;
+	padding: 20px 0px;
 	/* width: 100%; */
 	overflow: hidden;
 	display: flex;
@@ -141,15 +137,15 @@ body {
 
 .webrings {
 	>* {
-		position: absolute;
+		position: relative;
 	}
 }
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
 	.webrings {
 		display: none;
 	}
-}
+} */
 
 .middle {
 	display: flex;
@@ -214,7 +210,7 @@ body {
 
 	& img {
 		width: 100px;
-		;
+		position: relative;
 	}
 }
 
@@ -309,7 +305,6 @@ body {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	/* margin-top: 20px; */
-	z-index: 0;
 	position: relative;
 	top: -100px;
 	padding-top: 100px;
@@ -330,7 +325,7 @@ body {
 	>.ground {
 		display: flex;
 
-		z-index: 5;
+		z-index: 0;
 		position: absolute;
 		height: 1024px;
 		width: 100%;
@@ -342,6 +337,10 @@ body {
 			flex: auto auto 1;
 			width: 100%;
 			height: 100%;
+		}
+
+		& * {
+			z-index: inherit;
 		}
 
 
@@ -394,10 +393,12 @@ body {
 	height: 512px;
 
 	&:hover {
+		cursor: grab;
 		background-image: url(/assets/hub/dragonpet/fantasydragon-attention.gif);
 	}
 
 	&:active {
+		cursor: grabbing;
 		background-image: url(/assets/hub/dragonpet/fantasydragon-petted.gif );
 	}
 }
@@ -413,7 +414,7 @@ body {
 	flex: 1;
 	margin-right: 10%;
 	margin-top: 50px;
-	height: 512px;
+	height: calc(512-50)px;
 	text-align: center;
 }
 
@@ -474,5 +475,20 @@ footer {
 
 	& .construction {
 		background: #ffffff00;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 768px) {
+	footer {
+		& .construction {
+			width: 100%;
+			align-items: center;
+
+			& * {
+				scale: auto;
+
+			}
+		}
 	}
 }
