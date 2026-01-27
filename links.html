@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<title>FantasyDragon14 link page</title>
@@ -29,106 +29,74 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<img src="/assets/misc/fantasyDRAGON14.png" alt="Profile Picture of FantasyDragon14" id="pfp" />
-			<div>
-				<h1>FantasyDragon14</h1>
-				<p>whatever text i wanna put here, this is my linktree. it has links and stuff. lotsa links. the sections are even collapsible, so it's neat and tidy</p>
-			</div>
-		</div>
-		<div class="center">
-			<div class="level1">
-				<h2><a href="index.html">Main website link</a></h2>
-			</div>
-
-			<div class="level2"><a href="https://pronouns.page/@fantasydragon14">pronouns link</a></div>
-			<!-- social media -->
-			<div class="level1 collapsible">
-				<input type="checkbox" name="collapse2" id="handle2" />
-				<h2 class="handle">
-					<label for="handle2">my social media links</label>
-				</h2>
-				<div class="content">
-					<div class="level2">
-						<a href="https://fantasydragon14.tumblr.com">main Tumblr blog</a>
-					</div>
-
-					<div class="level2">
-						<a href="https://eternalfloof.tumblr.com">Tumblr art blog</a>
-					</div>
-
-					<div class="level2">
-						<a href="https://bsky.app/profile/fantasydragon.xyz">Bluesky</a>
-					</div>
-					<div class="level2">
-						<!-- TODO get right link -->
-						<a href="https://mastodon.social/@fantasydragon14">Mastodon</a>
-					</div>
-					<div class="level2">
-						<a href="http://discord.fantasydragon.xyz">Discord Server</a>
-					</div>
+		<header>
+			<nav>
+				<!-- Maybe I'll get a coherent nav menu together. Eventually. Or not -->
+			</nav>
+		</header>
+		<main>
+			<div class="profile">
+				<img src="/assets/misc/fantasyDRAGON14.png" alt="Profile Picture of FantasyDragon14" />
+				<div>
+					<h1>FantasyDragon14</h1>
+					<h2>Linktree</h2>
+					<p>
+						This is my linktree. it has links and stuff. lotsa links. the sections are even collapsible, so it's neat and tidy<br />
+						no bio here though, go to about me for that
+					</p>
 				</div>
 			</div>
-			<!-- comms -->
-			<div class="level1 collapsible">
-				<input type="checkbox" name="collapse2" id="handle3" />
-				<h2 class="handle">
-					<label for="handle3">communication <i>(also message me with...)</i></label>
-				</h2>
-				<div class="content">
-					<div class="level2">
-						<a href="https://discordapp.com/users/432248872845180932">Discord Profile</a>
-					</div>
-					<div class="level2">
-						<a href="https://matrix.to/#/@fantasydragon14:matrix.org">Matrix</a>
-					</div>
-					<div class="level2">
-						<a href="mailto:me@fantasydragon.xyz">me@fantasydragon.xyz</a>
-					</div>
-				</div>
-			</div>
-			<!-- gayming -->
-			<div class="level1 collapsible">
-				<input type="checkbox" name="collapse2" id="handle4" />
-				<h2 class="handle">
-					<label for="handle4">Gaming Accounts</label>
-				</h2>
-				<div class="content">
-					<div class="level2">
-						<a href="http://discord.fantasydragon.xyz">Discord Server</a>
-					</div>
-					<div class="level2">
-						<a href="https://steamcommunity.com/id/fantasydragon14">Steam profile</a>
-					</div>
-					<div class="level2">
-						<a href="https://steamcommunity.com/groups/fantasydragon14">Steam Group</a>
-					</div>
-					<div class="level2">
-						<a href="https://minecraft.fantasydragon.xyz/server">Minecraft Server</a>
-					</div>
-				</div>
-			</div>
-			<!-- dev -->
-			<div class="level1 collapsible">
-				<input type="checkbox" name="collapse2" id="handle5" />
-				<h2 class="handle">
-					<label for="handle5">Stuff i made <i>(coding etc.)</i></label>
-				</h2>
-				<div class="content">
-					<div class="level2">
-						<a href="https://github.com/fantasydragon14">Github Account</a>
-					</div>
-					<div class="level2">
-						<a href="https://neocities.org/site/fantasydragon14">Neocities Profile</a>
-					</div>
-					<div class="level2">
-						<a href="https://cyberdragon.fantasydragon.xyz">Cyberdragon Website</a>
-					</div>
-					<div class="level2">
-						<a href="https://minecraft.fantasydragon.xyz">Minecraft stuff</a>
-					</div>
-				</div>
-			</div>
-		</div>
+			<ul>
+				<li>
+					<h2><a href="/">Main website link</a></h2>
+				</li>
+				<li><a href="/about/me.html">about me</a></li>
+				<li><a href="https://pronouns.page/@fantasydragon14">pronouns link</a></li>
+				<li class="collapsible">
+					<input type="checkbox" id="socialmedia" />
+					<h2><label for="socialmedia">my social media links</label></h2>
+					<ul>
+						<li><a href="https://fantasydragon14.tumblr.com">main Tumblr blog</a></li>
+						<li><a href="https://eternalfloof.tumblr.com">Tumblr art blog</a></li>
+						<li><a href="https://bsky.app/profile/fantasydragon.xyz">Bluesky</a></li>
+						<li><a href="https://mastodon.social/@fantasydragon14">Mastodon</a></li>
+						<li><a href="http://discord.fantasydragon.xyz">Discord Server</a></li>
+					</ul>
+				</li>
+				<li class="collapsible">
+					<input type="checkbox" id="communication" />
+					<h2>
+						<label for="communication">communication <i>(also message me with...)</i></label>
+					</h2>
+					<ul>
+						<li><a href="https://discordapp.com/users/432248872845180932">Discord Profile</a></li>
+						<li><a href="https://matrix.to/#/@fantasydragon14:matrix.org">Matrix</a></li>
+						<li><a href="mailto:me@fantasydragon.xyz">me@fantasydragon.xyz</a></li>
+					</ul>
+				</li>
+				<li class="collapsible">
+					<input type="checkbox" id="gaming" />
+					<h2><label for="gaming">Gaming Accounts</label></h2>
+					<ul>
+						<li><a href="http://discord.fantasydragon.xyz">Discord Server</a></li>
+						<li><a href="https://steamcommunity.com/id/fantasydragon14">Steam profile</a></li>
+						<li><a href="https://steamcommunity.com/groups/fantasydragon14">Steam Group</a></li>
+						<li><a href="https://minecraft.fantasydragon.xyz/server">Minecraft Server</a></li>
+					</ul>
+				</li>
+				<li class="collapsible">
+					<input type="checkbox" id="projects" />
+					<h2>
+						<label for="projects">Stuff i made <i>(coding etc.)</i></label>
+					</h2>
+					<ul>
+						<li><a href="https://github.com/fantasydragon14">Github Account</a></li>
+						<li><a href="https://neocities.org/site/fantasydragon14">Neocities Profile</a></li>
+						<li><a href="https://cyberdragon.fantasydragon.xyz">Cyberdragon Website</a></li>
+						<li><a href="https://minecraft.fantasydragon.xyz">Minecraft stuff</a></li>
+					</ul>
+				</li>
+			</ul>
+		</main>
 	</body>
 </html>

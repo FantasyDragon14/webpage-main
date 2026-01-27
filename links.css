@@ -1,141 +1,165 @@
 @import url(colors.css);
 
 body {
-	background-color: rgb(11, 0, 20);
+	background: url(/assets/backgrounds/purplesky.gif);
 	color: var(--color_cyan);
-	font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-	align-items: center;
+	/* font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif; */
+	/* align-items: center; */
 }
 
-.container {
-	margin-top: 100px;
+main {
+	background: rgba(26, 0, 37, 0.75);
+	max-width: 786px;
+	margin: auto;
+	padding: 20px;
+	border: 5px double var(--color_teal);
+}
+
+.profile {
 	display: flex;
-	align-items: center;
-	margin: auto;
-	width: 50%;
-	position: relative;
+	margin: 20px auto;
+	width: fit-content;
+
+	>img {
+		border: 5px solid var(--color_teal);
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		margin: 10px;
+		position: relative;
+	}
+
+	& :nth-child(2) {
+		min-width: 230px;
+		max-width: 500px;
+	}
+
 }
 
-.center {
-	align-items: center;
-	margin: auto;
-	width: 75%;
-	min-width: 300px;
-}
+@media (max-width: 600px) {
+	.profile {
+		display: block;
 
-#pfp {
-	border-radius: 50%;
-	max-width: 100px;
-}
-
-.level1 {
-	/*for cosmetics*/
-	align-items: center;
-	margin: 20px;
-}
-
-.level2 {
-	/*for cosmetics*/
-	align-items: center;
-	margin: 20px;
+		>img {
+			margin: auto;
+		}
+	}
 }
 
 /*to add the little icons left of the links:*/
-a[href^="http"] {
-	padding-left: 19px;
-	background-size: 16px 16px;
-	background-repeat: no-repeat;
-	background-position: left center;
-}
+ul {
+	& a[href^="http"] {
+		padding-left: 19px;
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
 
-a[href="/"] {
-	background-image: url(/assets/favicons/favicon-vaporwave.png);
-	background-size: 30px 30px;
-	padding-left: 35px;
-	background-repeat: no-repeat;
-	background-position: left center;
-	image-rendering: pixelated;
-}
+	& a[href="/"] {
+		background-image: url(/assets/favicons/favicon-vaporwave.png);
+		background-size: 30px 30px;
+		padding-left: 35px;
+		background-repeat: no-repeat;
+		background-position: left center;
+		image-rendering: pixelated;
+	}
 
-a[href*="fantasydragon.xyz"] {
-	background-image: url(https://www.google.com/s2/favicons?domain=fantasydragon.xyz);
-}
+	& a[href="/about/me.html"] {
+		background-image: url(/assets/favicons/favicon-stars.png);
+		padding-left: 19px;
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left center;
+		image-rendering: pixelated;
+	}
 
-a[href*="pronouns.page"] {
-	background-image: url(https://www.google.com/s2/favicons?domain=pronouns.page);
-}
+	& a[href*="fantasydragon.xyz"] {
+		background-image: url(https://www.google.com/s2/favicons?domain=fantasydragon.xyz);
+	}
 
-a[href*="tumblr.com"] {
-	/* tumblr blog*/
-	background-image: url(https://www.google.com/s2/favicons?domain=tumblr.com);
-}
 
-/* a[href*="tumblr.com"] {
+	& a[href*="pronouns.page"] {
+		background-image: url(https://www.google.com/s2/favicons?domain=pronouns.page);
+	}
+
+	& a[href*="tumblr.com"] {
+		/* tumblr blog*/
+		background-image: url(https://www.google.com/s2/favicons?domain=tumblr.com);
+	}
+
+	/* & a[href*="tumblr.com"] {
 	background-image: url(/assets/other_icons/tumblr_logo_icon_229308.png);
 } */
 
-a[href*="bsky.app"] {
-	/* bluesky profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=bsky.app);
-}
+	& a[href*="bsky.app"] {
+		/* bluesky profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=bsky.app);
+	}
 
-a[href*="mastodon.social"] {
-	/* mastodon profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=mastodon.social);
-}
+	& a[href*="mastodon.social"] {
+		/* mastodon profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=mastodon.social);
+	}
 
-a[href*="discord.fantasydragon.xyz"] {
-	/* discord server*/
-	background-image: url(https://www.google.com/s2/favicons?domain=discord.gg);
-}
+	& a[href*="discord.fantasydragon.xyz"] {
+		/* discord server*/
+		background-image: url(https://www.google.com/s2/favicons?domain=discord.gg);
+	}
 
-a[href*="revolt.fantasydragon.xyz"] {
-	/* revolt server*/
-	background-image: url(https://www.google.com/s2/favicons?domain=rvlt.gg);
-}
+	& a[href*="revolt.fantasydragon.xyz"] {
+		/* revolt server*/
+		background-image: url(https://www.google.com/s2/favicons?domain=rvlt.gg);
+	}
 
-a[href*="discordapp.com"] {
-	/* discord profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=discordapp.com);
-}
+	& a[href*="discordapp.com"] {
+		/* discord profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=discordapp.com);
+	}
 
-a[href*="matrix.to"] {
-	/* matrix profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=matrix.org);
-}
+	& a[href*="matrix.to"] {
+		/* matrix profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=matrix.org);
+	}
 
-a[href*="mailto:"] {
-	/* all email*/
-	background-image: url(/assets/other_icons/e-mail.png);
-	padding-left: 19px;
-	background-size: 16px 16px;
-	background-repeat: no-repeat;
-	background-position: left center;
-}
+	& a[href*="mailto:"] {
+		/* all email*/
+		background-image: url(/assets/other_icons/e-mail.png);
+		padding-left: 19px;
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
 
-a[href*="steamcommunity.com"] {
-	/* steam profile and group*/
-	background-image: url(https://www.google.com/s2/favicons?domain=steamcommunity.com);
-}
+	& a[href*="steamcommunity.com"] {
+		/* steam profile and group*/
+		background-image: url(https://www.google.com/s2/favicons?domain=steamcommunity.com);
+	}
 
-a[href*="minecraft.fantasydragon.xyz"] {
-	/* minecraft*/
-	background-image: url(https://www.google.com/s2/favicons?domain=minecraft.fantasydragon.xyz);
-}
+	& a[href*="minecraft.fantasydragon.xyz"] {
+		/* minecraft*/
+		background-image: url(https://www.google.com/s2/favicons?domain=minecraft.fantasydragon.xyz);
+	}
 
-a[href*="github.com"] {
-	/* github profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=github.com);
-}
+	& a[href*="github.com"] {
+		/* github profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=github.com);
+	}
 
-a[href*="cyberdragon.fantasydragon.xyz"] {
-	/* cyberdragon website*/
-	background-image: url(https://www.google.com/s2/favicons?domain=cyberdragon.fantasydragon.xyz);
-}
+	& a[href*="cyberdragon.fantasydragon.xyz"] {
+		/* cyberdragon website*/
+		background-image: url(https://www.google.com/s2/favicons?domain=cyberdragon.fantasydragon.xyz);
+	}
 
-a[href*="neocities.org"] {
-	/* neocities profile*/
-	background-image: url(https://www.google.com/s2/favicons?domain=neocities.org);
+	& a[href*="neocities.org"] {
+		/* neocities profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=neocities.org);
+	}
+
+	& a[href*="neocities.org"] {
+		/* neocities profile*/
+		background-image: url(https://www.google.com/s2/favicons?domain=neocities.org);
+	}
+
 }
 
 a {
@@ -158,17 +182,32 @@ a:visited {
 	color: var(--color_purple);
 }
 
+ul {
+	list-style: none;
+	margin-left: 0px;
+	list-style-position: inside;
+
+	>li {
+		margin-left: -40px;
+	}
+}
+
+.collapsible {
+	margin-left: 0px;
+}
+
 .collapsible label::before {
-	/* the little arrow in the front */
-	content: ' ';
-	display: inline-block;
+	content: "";
+	border-color: transparent currentColor;
+	border-style: solid;
+	border-width: 0.35em 0 0.35em 0.45em;
+	display: block;
+	height: 0;
+	width: 0;
+	left: -1em;
+	top: 0.9em;
+	position: relative;
 
-	border-top: 5px solid transparent;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid currentColor;
-
-	vertical-align: middle;
-	margin-right: .7rem;
 	transform: translateY(-2px);
 
 	transition: transform .2s ease-out;
@@ -178,26 +217,24 @@ a:visited {
 	transform: rotate(90deg) translateX(-3px);
 }
 
-/*for functionality*/
 .collapsible>input[type="checkbox"] {
-	position: absolute;
-	left: -100vw;
+	display: none;
 }
 
-.collapsible .content {
+.collapsible>ul {
 	overflow-y: hidden;
-	height: 0;
-	transition: height 1s ease;
-	border-left: 2px solid var(--color_cyan);
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+	border-left: 3px solid var(--color_cyan);
 }
 
-.collapsible>input[type="checkbox"]:checked~.content {
-	height: auto;
-	overflow: visible;
+.collapsible>input[type="checkbox"]:checked~ul {
+	height: fit-content;
+	max-height: 200px;
+	transition: max-height 0.2s ease-in;
 }
-
 
 .collapsible label {
-	display: block;
+	/* display: block; */
 	cursor: pointer;
 }
