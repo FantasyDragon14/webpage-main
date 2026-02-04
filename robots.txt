@@ -2,10 +2,15 @@
 User-agent: googlebot
 
 User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 eightyeightthirtyone/1.0.0 (https://github.com/NotNite/eightyeightthirtyone)
+Disallow: /butlerian-jihad/
 Allow: /
 Allow: /hub.html
 Allow: /about/this-site.html
 Allow: /web/
+
+User-agent: archive.org_bot
+D
+Allow: /
 
 # for everyone
 User-agent: *
