@@ -36,13 +36,16 @@
 		<link href="/assets/favicons/favicon-den.png" rel="icon" type="image/png" />
 
 		<!-- Preload some Images that are used -->
-		<link rel="preload" href="/assets/backgrounds/clouds/1.png" />
-		<link rel="preload" href="/assets/backgrounds/clouds/2.png" />
-		<link rel="preload" href="/assets/backgrounds/clouds/3.png" />
-		<link rel="preload" href="/assets/backgrounds/clouds/4.png" />
-		<link rel="prefetch" href="/assets/hub/dragonpet/fantasydragon-sleeping.gif" />
-		<link rel="prefetch" href="/assets/hub/dragonpet/fantasydragon-attention.gif" />
-		<link rel="prefetch" href="/assets/hub/dragonpet/fantasydragon-petted.gif" />
+		<link rel="preload" href="/assets/backgrounds/clouds/1.png" as="image" />
+		<link rel="preload" href="/assets/backgrounds/clouds/2.png" as="image" />
+		<link rel="preload" href="/assets/backgrounds/clouds/3.png" as="image" />
+		<link rel="preload" href="/assets/backgrounds/clouds/4.png" as="image" />
+
+		<link rel="preload" href="/assets/dragonpet/fantasydragon-sleeping.gif" as="image" />
+		<link rel="prefetch" href="/assets/dragonpet/fantasydragon-attention.gif" as="image" />
+		<link rel="prefetch" href="/assets/dragonpet/fantasydragon-petted.gif" as="image" />
+
+		<link rel="preload" href="/assets/dragonpet/fantasydragon-sleeping.gif" as="image" />
 	</head>
 
 	<body>
@@ -341,6 +344,7 @@
 						<div class="webdragons-wrapper" webdragonid="2" url="https://ytd-online-status-checker.onrender.com/webdragons">
 							<script src="/assets/webrings/webdragons.js"></script>
 							<style></style>
+							<p style="width: 460px">Here should be the<a href="https://ytd.wtf/webdragons">webdragons webring</a> widget, but it can't load for some reason.</p>
 						</div>
 					</div>
 				</li>
@@ -398,6 +402,10 @@
 				<li style="background: url(/assets/backgrounds/clouds/3.png); animation-duration: 20s"></li>
 				<li style="background: url(/assets/backgrounds/clouds/4.png); animation-duration: 10s"></li>
 			</ul>
+			<!-- because for some reason the preload doesn't work... -->
+			<!-- <img src="/assets/dragonpet/fantasydragon-sleeping.gif" alt="" style="width: 0px; height: 0px" />
+			<img src="/assets/dragonpet/fantasydragon-attention.gif" alt="" style="width: 0px; height: 0px" />
+			<img src="/assets/dragonpet/fantasydragon-petted.gif" alt="" style="width: 0px; height: 0px" /> -->
 		</div>
 	</body>
 </html>
