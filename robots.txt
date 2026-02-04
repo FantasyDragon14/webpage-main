@@ -1,16 +1,21 @@
 # just google search:
 User-agent: googlebot
 
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 eightyeightthirtyone/1.0.0 (https://github.com/NotNite/eightyeightthirtyone)
+Allow: /
+Allow: /hub.html
+Allow: /about/this-site.html
+Allow: /web/
+
 # for everyone
 User-agent: *
 Disallow: /blog/
 Disallow: /assets/
 Disallow: /buttons/
 Disallow: /gallery/
-Disallow: /dragons-den/playground/
 Disallow: /butlerian-jihad/ # to get crawlers ignoring this file stuck
 Crawl-delay: 120
 Visit-time: 0200-0400
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
-Sitemap: https://fantasydragon.xyz/sitemap.xml
+# Sitemap: https://fantasydragon.xyz/sitemap.xml # TODO: uncomment this as soon as the sitemap is up
