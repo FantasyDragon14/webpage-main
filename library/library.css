@@ -1,0 +1,12 @@
+@import url(colors.css);
+
+@import url(theme_fantasy.css);
+@import url(theme_cyber.css);
+
+:root {
+  --lib-bg: antiquewhite
+}
+
+body {
+  background: var(--lib-bg);
+}

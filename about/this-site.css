@@ -5,60 +5,222 @@
   src: url(/assets/fonts/Minecraft-Seven_v2.ttf);
 }
 
-body {
-  font-family: minecraft_seven_v2;
+@font-face {
+  font-family: ibm_vga;
+  src: url(/assets/fonts/WebPlus_IBM_VGA_8x16.woff) format("woff");
+  src: url(/assets/fonts/PxPlus_IBM_VGA_8x16.ttf) format("truetype");
+  font-weight: 400
 }
 
+@font-face {
+  font-family: CozetteVector;
+  src: url(/assets/fonts/CozetteVector.ttf) format("truetype");
+  font-weight: 400
+}
 
-.web_buttons {
-  image-rendering: pixelated;
+@font-face {
+  font-family: NotoEmoji-Regular;
+  src: url(/assets/fonts/NotoEmoji-Regular.ttf) format("truetype");
+  unicode-range: U+1F300-1F5FF,
+    U+1F600-1F64F,
+    U+1F680-1F6FF,
+    U+2600-26FF
+}
 
+:root {
+  --color-bg: #11002ea1;
+  --color-bg: #11002e;
+  --color-bg-hover: #1095a749;
+  --color-text: #d0b7ff;
+  --color-text-em: #dcdcdc;
+  --color-link: #33e3e6;
+  --color-link-hover: #d65cd3;
+  --color-link-active: #a6f9fc;
+  --color-text-greem: #21ce97;
+}
+
+header {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: flex-start;
-  margin: auto auto 50px;
-  width: calc(100% - 68px);
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #000000a1;
 
+  >* {
+    min-width: max-content;
+    margin: 0;
+  }
+
+  >nav {
+    padding-right: 10px;
+  }
+
+  >h1 {
+    margin: 0 30% 0 auto;
+  }
 }
 
-.web_button {
-  display: inline-flex;
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: NotoEmoji-Regular, ibm_vga, monospace !important;
+  font-weight: 400 !important;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
 
-  > :nth-child(1) {
-    align-items: center;
-    justify-content: center;
-    height: 31px;
-    width: 88px;
-    user-select: none;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    font-style: normal;
-  }
+p {
+  margin: 0;
+  padding-left: 5px;
+}
 
-  > :nth-child(2) {
-    color: var(--color_darkpurple);
-    z-index: -1;
-    background: none !important;
-    margin: 0% !important;
-    white-space: nowrap;
-    position: absolute;
-    /* text-shadow: 2px 2px 2px #000; */
-    pointer-events: none;
-    font-size: 12px !important;
-    opacity: 0%;
-    font-weight: 400;
-  }
+a {
+  color: var(--color-link);
 
   &:hover {
-    filter: none;
-    transform: scale(2);
-    z-index: 9999;
+    color: var(--color-link-hover);
+  }
 
-    > :nth-child(2) {
-      transform: translate(0px, 32px);
-      transition: all 0.2s ease-in-out;
-      opacity: 100%;
+  &:active {
+    color: var(--color-link-active);
+  }
+}
+
+p:hover {
+  background-color: var(--color-bg-hover);
+}
+
+body>div {
+  display: flex;
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+
+  width: 70%;
+
+  >p::before {
+    content: "[ayla@fantasydragon.xyz ~]$";
+    color: var(--color-text-greem);
+    font-weight: bold;
+    padding-right: 10px;
+  }
+}
+
+.Timeline {
+  /* line-height: 1; */
+  /* letter-spacing: -.03em; */
+  padding: 10px;
+
+  >h3 {
+    margin: 0;
+
+    &:hover {
+      background-color: var(--color-bg-hover);
     }
+  }
+
+  >section {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 10px;
+
+    >:first-child {
+      position: sticky;
+      min-width: 80px;
+      margin-left: 10px;
+      top: 20px;
+      color: var(--color-text-em);
+    }
+
+    >div {
+      --size: .5rem;
+      width: var(--size);
+      height: var(--size);
+      margin: calc((1rem - var(--size))/2);
+      border-radius: 50%;
+      background-color: var(--color-link);
+      flex-grow: 0;
+    }
+
+    >p {
+      margin: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-bg-hover);
+    }
+
+  }
+}
+
+@media (max-width: 500px) {
+  .Timeline section {
+    flex-direction: column;
+  }
+
+  main>p::before {
+    content: "[ayla ~]$";
+  }
+}
+
+.cmd {
+  color: var(--color-text-em);
+}
+
+.web-buttons:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.neighbors:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.constr:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.README:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.patchnotes {
+  padding: 10px;
+  width: 25%;
+  min-width: 200px;
+  border-color: var(--color-text-greem);
+  border-style: groove;
+  border-width: 5px;
+}
+
+@media (max-width: 1000px) {
+  body>div {
+    display: flex;
+    flex-direction: column;
+
+    >main {
+      width: 95%;
+    }
+
+    .patchnotes {
+      width: 90%;
+    }
+  }
+}
+
+.construction {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+
+  >img {
+    max-width: 100%;
+    max-height: auto;
   }
 }

@@ -1,0 +1,232 @@
+@font-face {
+	font-family: minecraft_seven_v2;
+	src: url(/assets/fonts/Minecraft-Seven_v2.ttf);
+}
+
+body {
+	font-family: minecraft_seven_v2;
+}
+
+:root {
+	--color-bg: #111;
+
+}
+
+.neighbors>h2 {
+	margin-bottom: 0;
+	padding-left: calc(68px / 2);
+}
+
+.web_buttons {
+	image-rendering: pixelated;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: flex-start;
+	margin: auto auto;
+	padding: 10px 0px;
+	width: calc(100% - 68px);
+	list-style-type: none;
+	background-color: hsla(192, 50%, 50%, 0.2);
+
+}
+
+
+
+.web_button {
+	image-rendering: pixelated;
+	transition: all .2s;
+	-webkit-transition: all .2;
+
+	height: 64px;
+	width: 150px;
+
+	display: grid;
+	justify-content: center;
+	position: relative;
+
+	/* the banner/button */
+	>:nth-child(1) {
+		justify-self: center;
+		height: 31px;
+		width: 88px;
+		z-index: 10;
+		margin: 0px auto;
+
+	}
+
+	/* The Name */
+	> :nth-child(2) {
+		text-align: center;
+		color: var(--color_darkpurple);
+		/* background: none !important; */
+		margin: 0% !important;
+		/* text-shadow: 2px 2px 2px #000; */
+		font-size: 20px !important;
+		max-width: 100%;
+
+	}
+
+	/* The Description text */
+	> :nth-child(3) {
+		color: var(--color_darkpurple);
+		z-index: -1;
+		/* background: none !important; */
+		margin: 0% !important;
+		/* text-shadow: 2px 2px 2px #000; */
+		pointer-events: none;
+		font-size: 20px !important;
+		visibility: hidden;
+
+		opacity: 0%;
+		font-weight: 400;
+		top: -10px;
+		/* left: -50px; */
+		max-width: 100%;
+		/* width: 200px; */
+		background-color: hsla(192, 50%, 50%, 0.9);
+		border-width: 1px;
+		border-style: outset;
+		border-color: rgba(240, 46, 170, 0.5);
+	}
+
+	/* Scale up on hover */
+	&:hover {
+		z-index: 90;
+
+		> :nth-child(1)>* {
+			-webkit-transform: scale(1.5);
+			transform: scale(1.5);
+		}
+
+		> :nth-child(2) {
+			z-index: 0;
+			transform: translateY(10px);
+			-webkit-transform: translateY(10px);
+		}
+
+		/* show the text */
+		> :nth-child(3) {
+			visibility: visible;
+			transition: all 0.2s ease-in-out;
+			opacity: 100%;
+			width: 200px;
+			max-width: 200px;
+			white-space: normal;
+			pointer-events: all;
+			z-index: 100;
+			position: relative;
+		}
+	}
+}
+
+/* The Codeblock to copy our code */
+#BeingANeighbor {
+
+
+	.buttonselect {
+		margin: 0 auto;
+		padding-left: 16px;
+
+		>img {
+			image-rendering: pixelated;
+			content: url(../buttons);
+		}
+	}
+
+	.code-block {
+		border: 1px solid #00c59e;
+		border-radius: 5px;
+		margin: 20px 0;
+		font-family: sans-serif;
+		position: relative;
+		overflow: hidden;
+		max-height: max-content;
+		color: #fff;
+		width: 100%;
+		max-width: 700px;
+	}
+
+	.code-block-header {
+		display: flex;
+		justify-content: space-between;
+		background: #3c0053;
+		border-bottom: 1px solid #360086;
+		padding: 5px 10px;
+		font-size: 14px;
+		align-items: center;
+	}
+
+	.code-lang {
+		font-weight: bold;
+	}
+
+	#buttoncode_copy {
+		background: #6849F4;
+		border: 1px solid #000000;
+		border-radius: 5px;
+		padding: 8px 15px;
+		font-size: 14px;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		color: #a9ffda;
+	}
+
+	#buttoncode_copy:hover {
+		color: #000000;
+		background: #7F63FF;
+		border: 1px solid #000000;
+	}
+
+	pre {
+		margin: 0;
+		padding: 15px;
+		background: #1a1a1a;
+		overflow: auto;
+		font-size: 14px;
+		line-height: 1.4;
+		border-radius: 0 0 5px 5px;
+		border: 0.5px solid #1a0041;
+		tab-size: 4;
+	}
+
+	.code-content {
+
+		font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+		color: #77ff90;
+		content: "uhhh";
+	}
+}
+
+
+#bg-container {
+	z-index: -10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(ellipse at top left, rgb(246, 255, 217), rgb(69, 184, 255) 100%);
+	/* background: linear-gradient(rgb(84, 143, 162), rgb(255, 255, 255)) */
+}
+
+#bg-container li {
+	/*sick ass background gradient */
+	overflow-x: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1024px;
+	animation: bg_scroll 10s linear infinite;
+	background-color: rgb(242, 250, 255);
+}
+
+@keyframes bg_scroll {
+	to {
+		background-position: -1024px 0;
+	}
+}

@@ -1,0 +1,15 @@
+button html,site,name,desc,category,flyer,locations
+"<a href=""#"" title=""Why are you pulling a cloud""><img style=""width: 88px; height: 31px"" src=""/assets/backgrounds/clouds/cloud1.png"" alt=""a cloud"" /></a>",,,uhh...,fun,,hub
+"<a href=""#"" title=""Why are you pulling a cloud""><img style=""width: 88px; height: 31px"" src=""/assets/backgrounds/clouds/cloud2.png"" alt=""a cloud"" /></a>",,,hmm...,fun,,hub
+"<a href=""https://www.savethedragons.xyz"" target=""_blank"" rel=""noopener"" title=""Save the Dragons Campaign""><img src=""/assets/buttons/sites/savethedragons.xyz.gif"" width=""88"" height=""31"" alt=""SaveTheDragons button"" /></a>",https://www.savethedragons.xyz,Save the Dragons!,,other now,,hub me footer
+"<img src=""/assets/buttons/messages/twopaws.gif"" alt=""made with my own two paws"" />",,,,msg made,,site footer
+"<img src=""/assets/buttons/messages/raspberrypi.gif"" alt=""hosted on raspberrypi"" />",,,,msg,,site
+"<a href=""https://videolan.org""><img src=""/assets/buttons/sites/videolan.org-vlc.png"" alt=""VLC"" /></a>",https://videolan.org,,,other,,site
+"<a href=""https://blender.org""><img src=""/assets/buttons/sites/blender.org.gif"" alt=""Blender"" /></a>",https://blender.org,,,tool made,,site
+"<img src=""/assets/buttons/messages/autismnow.gif"" alt=""autism NOW!"" />",,,,msg now,,site me footer
+"<img src=""/assets/buttons/messages/button_vaporwave.gif"" alt=""Vaporwave"" />",,,,msg,,me
+"<img src=""/assets/buttons/messages/transnow2.gif"" alt=""Trans Rights NOW!"" />",,,,msg now,,site me footer
+"<a href=""https://archive.org""><img src=""/assets/buttons/sites/archive.org.gif"" alt=""Archive.org"" /></a>",https://archive.org,,,site,,site footer
+"<a href=""https://github.com/gorhill/uBlock""><img src=""/assets/buttons/sites/github.com-gorhill-uBlock.png"" alt=""uBlock Now!"" /></a>",https://github.com/gorhill/uBlock,,,site now,,site footer
+"<a href=""https://kde.org""><img src=""/assets/buttons/sites/kde.org.gif"" alt=""KDE Now!"" /></a>",https://kde.org,,,site now,,site footer
+"<a href=""https://store.steampowered.com""><img src=""/assets/buttons/sites/store.steampowered.com.gif"" alt=""play with Steam"" /></a>",https://store.steampowered.com,,,site,,site me footer

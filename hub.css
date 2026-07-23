@@ -10,6 +10,7 @@
 body {
 	margin: 0;
 	font-family: minecraft_seven_v2;
+	overflow-x: hidden;
 }
 
 .wip {
@@ -51,11 +52,17 @@ body {
 	}
 }
 
+.top>:first-child {
+	margin: 5px 10px 0px;
+	/* z-index: 5; */
+	position: absolute;
+}
+
 /* starting with the button carousel */
 /* web_buttons is the container. Then we have two identical ul (one hidden from screenreaders) to make seamless scroll possible */
 .web_buttons {
 	margin: 0px auto 50px;
-	padding: 20px 0px;
+	padding: 40px 0px 20px;
 	/* width: 100%; */
 	overflow: hidden;
 	display: flex;
@@ -84,7 +91,8 @@ body {
 
 .web_button {
 	image-rendering: pixelated;
-	transition: transform .2s;
+	transition: all .2s;
+	-webkit-transition: all .2;
 
 	width: 200px;
 	height: 100px;
@@ -103,7 +111,7 @@ body {
 	> :nth-child(2) {
 		color: var(--color_darkpurple);
 		z-index: -1;
-		background: none !important;
+		/* background: none !important; */
 		margin: 0% !important;
 		white-space: nowrap;
 		position: absolute;
@@ -113,6 +121,11 @@ body {
 		opacity: 0%;
 		font-weight: 400;
 		top: 50px;
+		max-width: 200px;
+		background-color: hsla(192, 50%, 50%, 0.75);
+		border-width: 1px;
+		border-style: outset;
+		border-color: rgba(240, 46, 170, 0.4);
 	}
 
 	/* the flyer */
@@ -124,13 +137,20 @@ body {
 
 	/* Scale up on hover */
 	&:hover {
+		-webkit-transform: scale(1.5);
 		transform: scale(1.5);
 
+		/* show the text */
 		> :nth-child(2) {
 			z-index: 100;
+			-webkit-transform: translate(0px, -50px);
 			transform: translate(0px, -50px);
 			transition: all 0.2s ease-in-out;
 			opacity: 100%;
+			max-width: 200px;
+			white-space: normal;
+			pointer-events: all;
+
 		}
 	}
 }
@@ -376,6 +396,10 @@ body {
 
 @media (max-width: 1024px) {
 
+	.island {
+		justify-content: center;
+	}
+
 	.island .ground,
 	.island .bottom {
 		>* {
@@ -396,6 +420,7 @@ body {
 	background-image: url(/assets/backgrounds/ground/2026-01-07\ sleep-ground.png);
 	z-index: 10;
 	background-repeat: no-repeat;
+	background-position: center center;
 	margin-left: 10%;
 	width: 512px;
 	height: 512px;
@@ -405,19 +430,19 @@ body {
 	z-index: 11;
 	position: relative;
 	background-repeat: no-repeat;
-	background-image: url(/assets/dragonpet/fantasydragon-sleeping.gif);
+	content: url(/assets/dragonpet/fantasydragon-sleeping.gif);
 	background-size: 100%;
 	width: 512px;
 	height: 512px;
 
 	&:hover {
 		cursor: grab;
-		background-image: url(/assets/dragonpet/fantasydragon-attention.gif);
+		content: url(/assets/dragonpet/fantasydragon-attention.gif);
 	}
 
 	&:active {
 		cursor: grabbing;
-		background-image: url(/assets/dragonpet/fantasydragon-petted.gif );
+		content: url(/assets/dragonpet/fantasydragon-petted.gif );
 	}
 }
 
@@ -439,6 +464,10 @@ body {
 @media (max-width: 768px) {
 	#follow_mouse {
 		display: none
+	}
+
+	.dragonsden {
+		margin-left: 0;
 	}
 }
 
@@ -548,6 +577,10 @@ ul {
 		z-index: 10;
 	}
 
+	>.ship:nth-of-type(2) {
+		z-index: 11;
+	}
+
 	>.ship:nth-of-type(3) {
 		z-index: 12;
 	}
@@ -556,19 +589,58 @@ ul {
 		z-index: 13;
 	}
 
-	>.ship:nth-of-type(2) {
-		z-index: 11;
-	}
+
 }
 
 @media (max-width: 896px) {
+	.docks {
+		width: 100%;
+		justify-content: center;
+		display: flex;
+	}
+
 	.docks .cargoarea {
 		display: none
 	}
 
 	.webrings {
+		display: unset;
+		padding: 0;
+		width: 100%;
+		justify-content: center;
+		align-content: center;
+		justify-items: center;
+		align-items: center;
+		/* overflow-y: auto; */
+
 		>.ship {
 			margin: 0 auto;
+			max-width: 100%;
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 620px) {
+	.webrings {
+		>[title="webdragons"] {
+			transform: scale(0.9);
+		}
+	}
+}
+
+@media (max-width: 560px) {
+	.webrings {
+		>[title="webdragons"] {
+			transform: scale(0.8);
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.webrings {
+		>[title="webdragons"] {
+			transform: scale(0.7);
 		}
 	}
 }
@@ -637,7 +709,7 @@ footer {
 			margin-bottom: 0px;
 		}
 
-		& embed {
+		& a {
 			justify-items: right;
 		}
 	}

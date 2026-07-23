@@ -1,0 +1,58 @@
+:root:has(#theme_toggle:checked) {
+  --synth-pink: #ff006e;
+  --synth-pink-bright: #ff1a8c;
+  --synth-pink-dark: #cc0058;
+  --synth-cyan: #00f5ff;
+  --synth-purple: #b537f2;
+  --synth-dark: #0a0a0f;
+  --synth-darker: #050508;
+  --synth-gray: #8b8b9e;
+  --bg-dark: #0a0a0f;
+  --bg-darker: #050508;
+  --glow-radius: 8px;
+
+  --accent-1: #FF00FF;
+  --accent-2: #00FFFF;
+  --accent-3: #00FF00;
+  --accent-4: #FFFF00;
+  --accent-5: #FF0000;
+  --accent-6: #0000FF;
+
+  --accent-1-muted: #ff79c6;
+  --accent-2-muted: #8be9fd;
+  --accent-3-muted: #50fa7b;
+  --accent-4-muted: #ffb86c;
+  --accent-5-muted: #ff5555;
+  --accent-6-muted: #bd93f9;
+
+  --background-primary: #2b213a;
+  --background-primary-alt: #171520;
+  --background-secondary: #1a1836;
+  --background-secondary-alt: #242043;
+
+  --text-accent: #FF1690;
+  --text-accent-hover: #7a6ae6;
+
+  --text-normal: var(--accent-1);
+  --text-muted: var(--accent-1-muted);
+  --text-faint: var(--accent-6-muted);
+
+  --interactive-normal: var(--accent-2);
+  --interactive-hover: var(--accent-2-muted);
+  --interactive-accent: var(--accent-2);
+  --interactive-accent-hover: var(--accent-2-muted);
+
+  --background-accent: #000;
+  --background-modifier-border: var(--accent-2);
+
+  --text-highlight-bg: #ffd319;
+}
+
+body:has(#theme_toggle:checked) {
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+}
+
+#theme_toggle:checked+label {
+  color: var(--interactive-normal);
+}

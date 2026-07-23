@@ -1,26 +1,30 @@
-# just google search:
-User-agent: googlebot
 
-User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 eightyeightthirtyone/1.0.0 (https://github.com/NotNite/eightyeightthirtyone)
+
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 eightyeightthirtyone/1.0.0 (https://github.com/NotNite/eightyeightthirtyone) # the eightyeightthirty.one crawler
 Disallow: /butlerian-jihad/
 Allow: /
+Allow: /hub
 Allow: /hub.html
+Allow: /about/this-site
 Allow: /about/this-site.html
+Allow: /about/neighbors
+Allow: /about/neighbors.html
 Allow: /web/
+Allow: /assets/buttons
 
-User-agent: archive.org_bot
-D
+User-agent: archive.org_bot # allow archive.org archival bot
+Disallow: /butlerian-jihad/
 Allow: /
 
-# for everyone
+# for everyone else
 User-agent: *
 Disallow: /blog/
 Disallow: /assets/
 Disallow: /buttons/
 Disallow: /gallery/
-Disallow: /butlerian-jihad/ # to get crawlers ignoring this file stuck
+Disallow: /butlerian-jihad/
 Crawl-delay: 120
-Visit-time: 0200-0400
+# Visit-time: 2300-0600
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Sitemap: https://fantasydragon.xyz/sitemap.xml # TODO: uncomment this as soon as the sitemap is up

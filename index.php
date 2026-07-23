@@ -1,0 +1,70 @@
+<!doctype html>
+
+<!-- This is the landing page -->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<!--
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		uncomment if mobile-ready
+		-->
+
+		<!-- Primary Meta Tags -->
+		<title>NEXUS Portal loading...</title>
+		<meta name="title" content="Enter the Dragons NEXUS!" />
+		<meta name="description" content="Personal website of FantasyDragon14 / Ayla" />
+		<meta name="author" content="FantasyDragon14" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://fantasydragon.xyz/" />
+		<meta property="og:title" content="Enter the Dragons NEXUS!" />
+		<meta property="og:description" content="Personal website of FantasyDragon14 / Ayla" />
+		<meta property="og:image" content="http://fantasydragon.xyz/assets/embeds/site-embed-vaporwave.gif" />
+
+		<meta content="#00ffff" data-react-helmet="true" name="theme-color" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://fantasydragon.xyz/" />
+		<meta property="twitter:title" content="Enter the Dragons NEXUS!" />
+		<meta property="twitter:description" content="Personal website of FantasyDragon14 / Ayla" />
+		<meta property="twitter:image" content="http://fantasydragon.xyz/assets/embeds/site-embed-vaporwave.gif" />
+
+		<!-- Meta Tags Generated with https://metatags.io -->
+		<link rel="me" href="https://mastodon.social/@fantasydragon14" />
+		<meta name="fediverse:creator" content="@fantasydragon14@mastodon.social" />
+
+		<link href="index.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/assets/favicons/favicon-vaporwave.png" rel="icon" type="image/png" />
+
+		<link href="https://fantasydragon.xyz/blog/feed.rss" rel="alternate" type="application/rss+xml" title="The Dragons Blog" />
+		<link href="https://fantasydragon.xyz/blog/feed.atom" rel="alternate" type="application/atom+xml" title="The Dragons Blog" />
+
+		<!-- remove/comment out the line below as soon as this page is deploy-ready-->
+		<!-- <meta http-equiv="refresh" content="5; url='/hub.html'" /> -->
+		<!---->
+	</head>
+	<div id="bg-container">
+		<div class="sun">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="sun-shadow"></div>
+		<div class="fog"></div>
+	</div>
+	<h1 style="z-index: 20">let us begin...</h1>
+
+	<body></body>
+</html>
