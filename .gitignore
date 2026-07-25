@@ -1,4 +1,8 @@
+.htaccess
 .git
 .vscode
 test*
 *.code-workspace
+blog
+site-updates.txt
+visitorcount.txt

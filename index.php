@@ -44,7 +44,7 @@
 		<link href="https://fantasydragon.xyz/blog/feed.atom" rel="alternate" type="application/atom+xml" title="The Dragons Blog" />
 
 		<!-- remove/comment out the line below as soon as this page is deploy-ready-->
-		<!-- <meta http-equiv="refresh" content="5; url='/hub.html'" /> -->
+		<meta http-equiv="refresh" content="5; url='/hub.html'" />
 		<!---->
 	</head>
 	<div id="bg-container">

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://codeberg.org/LunarEclipse/well-known-button/raw/branch/main/drafts/draft-filmroellchen-lunar-well-known-button-00.schema.json",
+  "default": "fantasydragon_random",
+  "buttons": [
+    {
+      "id": "fantasydragon_random",
+      "uri": "https://fantasydragon.xyz/buttons/",
+      "alt": "Button to FantasyDragon14s personal site, switching between available buttons every reload",
+      "link": "https://fantasydragon.xyz",
+      "hotlink": true,
+      "caption": "FantasyDragon14's personal Site"
+    },
+    {
+      "id": "fantasydragon_clouds_2026_05",
+      "uri": "https://fantasydragon.xyz/buttons/clouds",
+      "alt": "Dragon flying through Clouds with the text 'Dragons Den'",
+      "link": "https://fantasydragon.xyz",
+      "hotlink": true,
+      "caption": "FantasyDragon14's Den"
+    },
+    {
+      "id": "fantasydragon_vaporwave_2026_05",
+      "uri": "https://fantasydragon.xyz/buttons/clouds",
+      "alt": "Vaporwave style Dragon-Button with the text 'Dragons-Den'",
+      "link": "https://fantasydragon.xyz",
+      "hotlink": true,
+      "caption": "FantasyDragon14's Hub"
+    },
+    {
+      "id": "fantasydragon_home_2026_05",
+      "uri": "https://fantasydragon.xyz/buttons/clouds",
+      "alt": "talking sprite of Ayla with a spaceship next to her, titled HOME",
+      "link": "https://fantasydragon.xyz",
+      "hotlink": true,
+      "caption": "FantasyDragon14's HOME"
+    }
+  ]
+}
