@@ -64,7 +64,7 @@
 		<div class="sun-shadow"></div>
 		<div class="fog"></div>
 	</div>
-	<h1 style="z-index: 20">let us begin...</h1>
+	<h1 class="enter_button"><a href="/hub">Enter</a></h1>
 
 	<body></body>
 </html>
