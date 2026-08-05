@@ -33,6 +33,8 @@
 		<!-- <link rel="stylesheet" href="https://nexus.fantasydragon.xyz/nexusring.css" /> -->
 		<link rel="stylesheet" href="https://test.fantasydragon.xyz/webring/nexusring.css" />
 
+		<link rel="stylesheet" href="webdragons.css" />
+
 		<link href="/assets/favicons/favicon-den.png" rel="icon" type="image/png" />
 
 		<!-- Preload some Images that are used -->
@@ -135,11 +137,10 @@
 				<li class="ship" title="webdragons">
 					<img src="/assets/webrings/Webringship-Webdragons.png" />
 					<div class="webring">
-						<div class="webdragons-wrapper" webdragonid="2" url="https://ytd-online-status-checker.onrender.com/webdragons">
-							<script src="/assets/webrings/webdragons.js"></script>
-							<style></style>
-							<p style="width: 460px">Here should be the <a href="https://ytd.wtf/webdragons">webdragons webring</a> widget, but it can't load for some reason.</p>
-						</div>
+						<script src="https://ytd.wtf/webdragons/webdragons-widget.js" nocss></script>
+						 <!-- <script src="https://ytd.wtf/webdragons/webdragons-widget.js"></script> -->
+						<!-- <iframe src="https://b.ytd.wtf/webdragons/widget?id=2" width="266" height="79" frameborder="0"></iframe> -->
+
 					</div>
 				</li>
 				<!--
