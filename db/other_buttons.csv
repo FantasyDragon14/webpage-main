@@ -13,3 +13,5 @@ button html,site,name,desc,category,flyer,locations
 "<a href=""https://github.com/gorhill/uBlock""><img src=""/assets/buttons/sites/github.com-gorhill-uBlock.png"" alt=""uBlock Now!"" /></a>",https://github.com/gorhill/uBlock,,,site now,,site footer
 "<a href=""https://kde.org""><img src=""/assets/buttons/sites/kde.org.gif"" alt=""KDE Now!"" /></a>",https://kde.org,,,site now,,site footer
 "<a href=""https://store.steampowered.com""><img src=""/assets/buttons/sites/store.steampowered.com.gif"" alt=""play with Steam"" /></a>",https://store.steampowered.com,,,site,,site me footer
+"<a href=""https://www.php.net""><img src=""/assets/buttons/sites/www.php.net.gif"" alt=""Powered by PHP"" /></a>",https://www.php.net,,,site msg,,site
+"<a href=""https://eightyeightthirty.one/#fantasydragon.xyz""><img src=""/assets/buttons/sites/eightyeightthirty.one.png"" alt=""88x31"" /></a>",https://eightyeightthirty.one/#fantasydragon.xyz,,,"site ",,site me footer

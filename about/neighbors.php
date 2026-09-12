@@ -126,7 +126,7 @@ function udiffCompare($a, $b)
 				</ul>
 			</section>
 			<section id="BeingANeighbor">
-				<h2>Be a Neigbor</h2>
+				<h2>Be a Neighbor</h2>
 				<p>You want to be our web-neighbor and link to my site? just choose which button you want to display and copy the code</p>
 				<div class="buttonselect">
 					<img id="ownbtn" src="../buttons" alt="FantasyDragon Button">
@@ -217,14 +217,15 @@ updateImage()
 				</script>
 			</section>
 
-			<aside class="schrebergarten">
-				<h3>Schrebergarten</h3>
-				<p>you ever heard of a <a href="https://webgardens.neocities.org/">Webgarden?</a> here's our collection</p>
-				<div class="plots">
-					<iframe src="https://fantasydragon.xyz/webgarden" height="250px" width="250px" scrolling="no"></iframe>
-					<iframe src="https://vertpush.neocities.org/webgarden" height="270" width="270" scrolling="no"></iframe>
-				</div>
-			</aside>
+
 		</main>
+		<aside class="schrebergarten">
+			<h3>Schrebergarten</h3>
+			<p>you ever heard of a <a href="https://webgardens.neocities.org/">Webgarden?</a> here's our collection</p>
+			<div class="plots">
+				<iframe src="https://fantasydragon.xyz/webgarden" height="250px" width="250px" scrolling="no"></iframe>
+				<iframe src="https://vertpush.neocities.org/webgarden" height="270" width="270" scrolling="no"></iframe>
+			</div>
+		</aside>
 	</body>
 </html>

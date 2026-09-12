@@ -559,8 +559,7 @@ ul {
 
 }
 
-.webrings>[title="transing the internet"] {
-	margin-right: 55px;
+.webrings>[title="transring"] {
 
 	& .webring {
 		/* top: 100px; */

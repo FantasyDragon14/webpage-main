@@ -56,6 +56,7 @@ main {
 h2 {
 	margin: 0 0 0 0;
 }
+
 /*to add the little icons left of the links:*/
 ul {
 	& a[href^="http"] {
@@ -115,10 +116,12 @@ ul {
 		/* discord profile*/
 		background-image: url(https://www.google.com/s2/favicons?domain=discordapp.com);
 	}
+
 	& a[href*="stoat.gg"] {
 		/* stoat profile*/
 		background-image: url(https://www.google.com/s2/favicons?domain=stoat.chat);
 	}
+
 	& a[href*="fluxer.app"] {
 		/* fluxer profile*/
 		background-image: url(https://www.google.com/s2/favicons?domain=fluxer.app);
@@ -128,18 +131,22 @@ ul {
 		/* j4f discord server*/
 		background-image: url(https://www.google.com/s2/favicons?domain=j4f.fantasydragon.xyz);
 	}
+
 	& a[href*="j4f.fantasydragon.xyz/discord"] {
 		/* j4f discord server*/
 		background-image: url(https://www.google.com/s2/favicons?domain=discord.gg);
 	}
+
 	& a[href*="j4f.fantasydragon.xyz/fluxer"] {
 		/* j4f stoat server*/
 		background-image: url(https://www.google.com/s2/favicons?domain=stoat.gg);
 	}
+
 	& a[href*="j4f.fantasydragon.xyz/stoat"] {
 		/* j4f stoat server*/
 		background-image: url(https://www.google.com/s2/favicons?domain=fluxer.app);
 	}
+
 	& a[href*="j4f.fantasydragon.xyz/steam"] {
 		/* j4f steam group*/
 		background-image: url(https://www.google.com/s2/favicons?domain=steamcommunity.com);
@@ -154,31 +161,38 @@ ul {
 		/* gaming website*/
 		background-image: url(https://www.google.com/s2/favicons?domain=play.fantasydragon.xyz);
 	}
+
 	& a[href*="cyberdragon.fantasydragon.xyz"] {
 		/* cyberdragon website*/
 		background-image: url(https://www.google.com/s2/favicons?domain=cyberdragon.fantasydragon.xyz);
 	}
+
 	& a[href*="minecraft.fantasydragon.xyz"] {
 		/* minecraft*/
 		background-image: url(https://www.google.com/s2/favicons?domain=minecraft.fantasydragon.xyz);
 	}
+
 	& a[href*="vintagestory.fantasydragon.xyz"] {
 		/* vintagestory*/
 		background-image: url(https://www.google.com/s2/favicons?domain=vintagestory.fantasydragon.xyz);
 	}
+
 	& a[href*="art.fantasydragon.xyz"] {
 		/* art gallery*/
 		background-image: url(https://www.google.com/s2/favicons?domain=art.fantasydragon.xyz);
 		background-image: url(https://www.google.com/s2/favicons?domain=tumblr.com);
 	}
+
 	& a[href*="cloud.fantasydragon.xyz"] {
 		/* dragoncloud */
 		background-image: url(https://www.google.com/s2/favicons?domain=cloud.fantasydragon.xyz);
 	}
+
 	& a[href*="pronouns.fantasydragon.xyz"] {
 		/* pronouns.page redirect */
 		background-image: url(https://www.google.com/s2/favicons?domain=pronouns.fantasydragon.xyz);
 	}
+
 	& a[href*="matrix.fantasydragon.xyz"] {
 		/* pronouns.page redirect */
 		background-image: url(https://www.google.com/s2/favicons?domain=matrix.org);
@@ -191,7 +205,7 @@ ul {
 
 	& a[href*="mailto:"] {
 		/* all email*/
-		background-image: url(/assets/other_icons/e-mail.png);
+		background-image: url(/assets/icons/e-mail.png);
 		padding-left: 19px;
 		background-size: 16px 16px;
 		background-repeat: no-repeat;
@@ -208,6 +222,7 @@ ul {
 		/* github profile*/
 		background-image: url(https://www.google.com/s2/favicons?domain=github.com);
 	}
+
 	& a[href*="codeberg.org"] {
 		/* codeberg profile*/
 		background-image: url(https://www.google.com/s2/favicons?domain=codeberg.org);

@@ -5,11 +5,35 @@
 
 body {
 	font-family: minecraft_seven_v2;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+body>* {
+	width: 100%;
 }
 
 :root {
 	--color-bg: #111;
+	--schrebergarten-width: 300px;
 
+}
+
+.schrebergarten {
+	min-width: var(--schrebergarten-width)
+}
+
+@media (min-width: 1200px) {
+
+
+	main {
+		width: calc(100% - var(--schrebergarten-width) - 16px)
+	}
+
+	.schrebergarten {
+		margin-top: 100px;
+		width: var(--schrebergarten-width);
+	}
 }
 
 .neighbors>h2 {
@@ -31,8 +55,6 @@ body {
 	background-color: hsla(192, 50%, 50%, 0.2);
 
 }
-
-
 
 .web_button {
 	image-rendering: pixelated;
@@ -96,8 +118,8 @@ body {
 		z-index: 90;
 
 		> :nth-child(1)>* {
-			-webkit-transform: scale(1.5);
-			transform: scale(1.5);
+			-webkit-transform: scale(2);
+			transform: scale(2);
 		}
 
 		> :nth-child(2) {
@@ -127,11 +149,21 @@ body {
 
 	.buttonselect {
 		margin: 0 auto;
-		padding-left: 16px;
+		padding-left: 40px;
 
 		>img {
 			image-rendering: pixelated;
 			content: url(../buttons);
+
+			&:hover {
+				-webkit-transform: scale(2);
+				transform: scale(2);
+
+				+* {
+					margin-left: 48px;
+				}
+			}
+
 		}
 	}
 
@@ -200,6 +232,8 @@ body {
 		content: "uhhh";
 	}
 }
+
+
 
 
 #bg-container {
