@@ -424,6 +424,7 @@ body {
 	margin-left: 10%;
 	width: 512px;
 	height: 512px;
+	overflow: hidden;
 }
 
 #dragon_sleep {
@@ -477,6 +478,8 @@ body {
 	flex-direction: row;
 	min-height: 512px;
 	width: fit-content;
+	max-width: 100%;
+	overflow: hidden;
 	margin: 0 auto;
 
 	>.cargoarea {
@@ -503,6 +506,7 @@ ul {
 }
 
 .webrings {
+
 	display: flex;
 	flex-direction: column;
 	justify-content: right;
@@ -514,6 +518,7 @@ ul {
 		/* justify-content: right; */
 		position: relative;
 		width: fit-content;
+		max-width: 100%;
 		height: fit-content;
 		margin: 0 0 0 auto;
 
@@ -560,13 +565,16 @@ ul {
 }
 
 .webrings>[title="transring"] {
+	>img {
+		max-width: 100%;
+	}
 
 	& .webring {
 		/* top: 100px; */
 		/* left: 50px; */
 		/* height: 64px; */
 		width: calc(168px+50px);
-		margin-top: 70px;
+		margin-top: 10%;
 	}
 }
 
